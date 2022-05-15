@@ -10,3 +10,9 @@ output "vpn_client_cert" {
 output "vpn_client_key" {
   value = tls_private_key.root.private_key_pem
 }
+output "client_cert" {
+  value = aws_acm_certificate.root.certificate_body
+}
+output "client_key" {
+  value = aws_acm_certificate.root.private_key
+}
